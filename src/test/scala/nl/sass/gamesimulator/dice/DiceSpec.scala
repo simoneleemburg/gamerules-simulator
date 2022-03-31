@@ -1,11 +1,12 @@
-package nl.sass
+package nl.sass.gamesimulator.dice
 
+import nl.sass.gamesimulator.dsl._
 import org.scalatest._
 
 class DiceSpec extends WordSpec with Matchers {
 
   "given random number resolution" when {
-    implicit val r: dieResolution = new randomResolution
+    implicit val r = RandomResolution
     "rolling a d20 dice" should {
       val dice = d.d20
       "result in at least a 1" in {

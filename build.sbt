@@ -1,19 +1,11 @@
-name := "vending-machine"
+name := "gamerules-simulator"
 
-organization in ThisBuild := "nl.zorgdomein"
+organization in ThisBuild := "nl.sass"
 
 scalaVersion in ThisBuild := "2.12.11"
 
-resolvers in ThisBuild += "Zorgdomein Nexus repository" at "https://nexus.aws.zorgdomein.nl/content/groups/release-local-group/"
-
-credentials += Credentials(Path.userHome / ".ivy2" / ".credentials")
-
-pinkLibsVersion in ThisBuild := "3.10.4"
-akkaHttpVersion in ThisBuild := "10.0.13"
-jmxPrometheusJavaagentVersion in ThisBuild := "0.3.1"
-aspectjweaverVersion in ThisBuild := "1.8.10"
-
 libraryDependencies in ThisBuild ++= Seq(
+  "org.typelevel" %% "cats-core" % "2.3.0",
   "org.scalatest" %% "scalatest" % "3.0.1" % "test",
   "org.mockito" % "mockito-core" % "2.+" % "test"
 )
