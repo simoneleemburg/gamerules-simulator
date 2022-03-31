@@ -1,0 +1,32 @@
+<configuration>
+
+    <conversionRule conversionWord="traceToken" converterClass="kamon.trace.logging.LogbackTraceTokenConverter"/>
+
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
+            <providers>
+                <timestamp/>
+                <message/>
+                <loggerName/>
+                <logLevel/>
+                <pattern>
+                    <pattern>{ "traceToken": "%traceToken", "service": "${SERVICE_NAME:-undefined}", "env":
+                        "${DEPLOY_ENV:-undefined}" }
+                    </pattern>
+                </pattern>
+                <stackTrace/>
+            </providers>
+        </encoder>
+    </appender>
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="${LOGBACK_LOGLEVEL:-info}">
+        <appender-ref ref="${LOGBACK_APPENDER:-CONSOLE}"/>
+    </root>
+
+</configuration>

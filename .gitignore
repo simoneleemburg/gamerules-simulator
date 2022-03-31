@@ -1,0 +1,36 @@
+# Ignore all dotfiles...
+# except for .gitignore
+!.gitignore
+.DS_Store
+.idea/
+.bintray/
+*.iml
+target
+.docker-sync
+.bsp
+.vscode
+
+# Ignore Play! working directory #
+eclipse
+log
+logs
+*.log
+precompiled
+project/project
+project/target
+target
+tmp
+test-result
+server.pid
+*.eml
+dist
+out
+my-assets
+*.stackdump
+.bloop/
+.metals/
+project/metals.sbt
+
+# Ignore local application.conf changes
+/conf/application.local-*.conf
+/conf/generated.keystore
