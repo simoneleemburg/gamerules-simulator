@@ -2,7 +2,7 @@ package nl.sass.gamesimulator
 
 import nl.sass.gamesimulator.d20.DefaultGameRules
 import nl.sass.gamesimulator.d20.inventory.characters
-import nl.sass.gamesimulator.d20.model.{Action, ActionType}
+import nl.sass.gamesimulator.d20.model.{ Action, ActionType }
 import nl.sass.gamesimulator.dice._
 
 object Simulator extends App {

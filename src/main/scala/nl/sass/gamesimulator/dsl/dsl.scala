@@ -1,7 +1,7 @@
 package nl.sass.gamesimulator
 
-import nl.sass.gamesimulator.dice.Dice.{addition, constant, die, simple}
-import nl.sass.gamesimulator.dice.{DieResolution, Result, d, resolution}
+import nl.sass.gamesimulator.dice.Dice.{ addition, constant, die, simple }
+import nl.sass.gamesimulator.dice.{ DieResolution, Result, d, resolution }
 
 package object dsl {
 

@@ -1,7 +1,7 @@
 package nl.sass.gamesimulator
 
 import cats.data.NonEmptyList
-import nl.sass.gamesimulator.d20.model.{Armor, Weapon}
+import nl.sass.gamesimulator.d20.model.{ Armor, Weapon }
 
 case class Character(name: Name, stats: Stats)
 

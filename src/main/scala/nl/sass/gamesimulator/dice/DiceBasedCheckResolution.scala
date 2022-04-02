@@ -2,7 +2,7 @@ package nl.sass.gamesimulator.dice
 
 import nl.sass.gamesimulator.Outcome._
 import nl.sass.gamesimulator.dsl._
-import nl.sass.gamesimulator.{CheckResolution, _}
+import nl.sass.gamesimulator.{ CheckResolution, _ }
 
 class DiceBasedCheckResolution(implicit dieResolution: DieResolution) extends CheckResolution {
   override def resolve(challenge: Check): Outcome = challenge match {

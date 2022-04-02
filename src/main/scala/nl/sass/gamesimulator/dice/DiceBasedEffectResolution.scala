@@ -1,7 +1,7 @@
 package nl.sass.gamesimulator.dice
 
 import nl.sass.gamesimulator.Effect._
-import nl.sass.gamesimulator.{EffectResolution, _}
+import nl.sass.gamesimulator.{ EffectResolution, _ }
 
 class DiceBasedEffectResolution(implicit dieResolution: DieResolution) extends EffectResolution {
   override def resolve[E <: Effect](resolvableAction: ResolvableAction[E], effect: E): Seq[Event] =

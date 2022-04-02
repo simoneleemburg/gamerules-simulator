@@ -1,7 +1,7 @@
 package nl.sass.gamesimulator
 
 import nl.sass.gamesimulator.d20.GameRules
-import nl.sass.gamesimulator.d20.model.{Action, ActionType}
+import nl.sass.gamesimulator.d20.model.{ Action, ActionType }
 
 object ActionPerforming {
   def perform(action: Action)(duel: Duel, gameRules: GameRules): ResolvableAction[Effect] = action.actionType match {
