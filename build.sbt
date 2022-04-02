@@ -1,14 +1,12 @@
 name := "gamerules-simulator"
 
-organization in ThisBuild := "nl.sass"
+organization := "nl.sass"
 
-scalaVersion in ThisBuild := "2.12.11"
+scalaVersion := "2.13.8"
 
-libraryDependencies in ThisBuild ++= Seq(
-  "org.typelevel" %% "cats-core" % "2.3.0",
-  "org.scalatest" %% "scalatest" % "3.0.1" % "test",
-  "org.mockito" % "mockito-core" % "2.+" % "test"
-)
+libraryDependencies +=  "org.typelevel" %% "cats-core" % "2.3.0"
+libraryDependencies += "org.scalactic" %% "scalactic" % "3.2.11"
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.11" % "test"
 
 scalacOptions in ThisBuild := Seq("-encoding", "utf8",
   "-target:jvm-1.8",
@@ -19,13 +17,11 @@ scalacOptions in ThisBuild := Seq("-encoding", "utf8",
   "-deprecation",
   "-Xlog-reflective-calls",
   "-Xlint",
-  "-Ywarn-unused",
-  "-Ywarn-unused-import",
-  "-Ypartial-unification"
+  "-Ywarn-unused"
 )
 
-updateOptions in ThisBuild := updateOptions.value.withCachedResolution(true)
+updateOptions := updateOptions.value.withCachedResolution(true)
 
-scalacOptions in Test ++= Seq("-Yrangepos")
+coverageMinimumStmtTotal := 100
 
-coverageFailOnMinimum in ThisBuild := true
+coverageFailOnMinimum:= true

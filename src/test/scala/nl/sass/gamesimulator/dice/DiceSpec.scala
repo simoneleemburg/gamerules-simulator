@@ -1,9 +1,9 @@
 package nl.sass.gamesimulator.dice
 
+import nl.sass.gamesimulator.BaseSpec
 import nl.sass.gamesimulator.dsl._
-import org.scalatest._
 
-class DiceSpec extends WordSpec with Matchers {
+class DiceSpec extends BaseSpec {
 
   "given random number resolution" when {
     implicit val r = RandomResolution

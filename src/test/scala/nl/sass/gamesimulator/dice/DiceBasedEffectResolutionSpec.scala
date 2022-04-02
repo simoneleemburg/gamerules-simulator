@@ -5,9 +5,8 @@ import nl.sass.gamesimulator.Effect._
 import nl.sass.gamesimulator._
 import nl.sass.gamesimulator.d20.inventory.characters
 import nl.sass.gamesimulator.dsl._
-import org.scalatest.{ Matchers, WordSpec }
 
-class DiceBasedEffectResolutionSpec extends WordSpec with Matchers {
+class DiceBasedEffectResolutionSpec extends BaseSpec {
 
   val dice = 2.d4 + 2
 

@@ -1,8 +1,8 @@
 package nl.sass.gamesimulator.d20.model
 
-import org.scalatest._
+import nl.sass.gamesimulator.BaseSpec
 
-class AttackBonusSpec extends WordSpec with Matchers {
+class AttackBonusSpec extends BaseSpec {
 
   "given a default attack bonus" when {
     "providing a base of 1 plus 2 bonus" should {
