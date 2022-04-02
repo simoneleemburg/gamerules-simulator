@@ -1,4 +1,4 @@
-package nl.sass.gamesimulator
+package nl.sass.gamesimulator.d20.model
 
 import org.scalatest._
 

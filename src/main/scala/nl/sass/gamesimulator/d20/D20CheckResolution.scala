@@ -1,10 +1,11 @@
-package nl.sass.gamesimulator.dice
+package nl.sass.gamesimulator.d20
 
 import nl.sass.gamesimulator.Outcome._
+import nl.sass.gamesimulator.dice.{ DieResolution, Result, d }
 import nl.sass.gamesimulator.dsl._
 import nl.sass.gamesimulator.{ CheckResolution, _ }
 
-class DiceBasedCheckResolution(implicit dieResolution: DieResolution) extends CheckResolution {
+class D20CheckResolution(implicit dieResolution: DieResolution) extends CheckResolution {
   override def resolve(challenge: Check): Outcome = challenge match {
     case dc: DifficultyCheck => DiceResolutions.d20Challenge(dc)
   }

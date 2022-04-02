@@ -2,6 +2,7 @@ package nl.sass.gamesimulator.d20.inventory
 
 import nl.sass.gamesimulator._
 import nl.sass.gamesimulator.d20.inventory.weapons._
+import nl.sass.gamesimulator.d20.model._
 
 object characters {
 
