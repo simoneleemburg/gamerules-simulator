@@ -14,7 +14,7 @@ trait D20GameRules {
 object DefaultD20GameRules extends D20GameRules {
   override def attackRoll(weapon: Weapon, attackBonus: AttackBonus, armorClass: ArmorClass) =
     Challenge(
-      DifficultyCheck(attackBonus, armorClass.baseValue),
+      DifficultyCheck(attackBonus, armorClass.value),
       {
         case CriticalSuccess => DealDamage(weapon.criticalDamage)
         case Success => DealDamage(DamageAmount.Full)

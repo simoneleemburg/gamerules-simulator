@@ -52,8 +52,22 @@ object RandomResolution extends DieResolution {
   override def roll(d: d): Result = Result(scala.util.Random.nextInt(d.sides) + 1)
 }
 
-object MaximumRollResolution extends DieResolution {
-  override def roll(d: d): Result = Result(d.sides)
+object FixedRollResolution {
+  val maximumRollResolution = FixedRollResolution(20)
+  val minimumRollResolution = FixedRollResolution(1)
+}
+
+case class FixedRollResolution(fixedResult: Int) extends DieResolution {
+  override def roll(d: d): Result = Result(Math.min(fixedResult, d.sides))
+}
+
+case class AverageRollResolution(var roundUp: Boolean = false) extends DieResolution {
+
+  override def roll(d: d): Result = {
+    val result = if (roundUp) d.sides / 2 + 1 else d.sides / 2
+    roundUp = !roundUp
+    Result(result)
+  }
 }
 
 case class Result(value: Int) {

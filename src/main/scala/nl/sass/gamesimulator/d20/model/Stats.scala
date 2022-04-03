@@ -2,9 +2,7 @@ package nl.sass.gamesimulator.d20.model
 
 import cats.data.NonEmptyList
 
-case class Stats(attacks: Attacks, armorClass: ArmorClass, hitPoints: HitPoints) {
-  def isIncapacitated = hitPoints.amount <= 0
-}
+case class Stats(attacks: Attacks, armorClass: ArmorClass, hitPoints: HitPoints)
 
 case class Attributes(strength: AttributeBonus)
 

@@ -17,7 +17,7 @@ class DiceBasedEffectResolutionSpec extends BaseSpec {
     DamageSource(dice))
 
   "given maximum resolution" when {
-    implicit val r = MaximumRollResolution
+    implicit val r = FixedRollResolution.maximumRollResolution
     val res = new DiceBasedEffectResolution()
     "resolving damage of a normal hit" should {
       "result in 10 damage received" in {
