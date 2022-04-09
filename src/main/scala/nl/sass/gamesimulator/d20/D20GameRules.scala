@@ -27,7 +27,7 @@ object DefaultD20GameRules extends D20GameRules {
 
 object D20GameRules {
   def toGenericGameRules(d20GameRules: D20GameRules) = new GameRules[Stats] {
-    override def attackChallenge(actor: Stats, target: Stats): Challenge[Effect] =
+    override def attackChallenge(actor: Stats, target: Stats, attackType: AttackType[Stats]): Challenge[Effect] =
       d20GameRules.attackRoll(actor.attacks.weapon, actor.attacks.toHit.head, target.armorClass)
 
     override def damageSource(actor: Stats): DamageSource =

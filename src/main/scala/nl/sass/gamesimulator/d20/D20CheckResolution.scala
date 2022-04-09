@@ -1,6 +1,7 @@
 package nl.sass.gamesimulator.d20
 
 import nl.sass.gamesimulator.Outcome._
+import nl.sass.gamesimulator.d20.model.DifficultyCheck
 import nl.sass.gamesimulator.dice.{ DieResolution, Result }
 import nl.sass.gamesimulator.dsl._
 import nl.sass.gamesimulator.{ CheckResolution, _ }

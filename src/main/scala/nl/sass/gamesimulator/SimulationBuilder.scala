@@ -2,7 +2,7 @@ package nl.sass.gamesimulator
 
 import nl.sass.gamesimulator.d20.inventory.characters
 import nl.sass.gamesimulator.d20.{D20CheckResolution, D20GameRules, DefaultD20GameRules}
-import nl.sass.gamesimulator.d20.model.{Action, ActionType, Stats}
+import nl.sass.gamesimulator.d20.model.{ActionType, Stats}
 import nl.sass.gamesimulator.dice.{DiceBasedEffectResolution, DieResolution, RandomResolution}
 
 object SimulationBuilder {
@@ -32,8 +32,8 @@ case class SimulationBuilder(
 
 object D20Scenario {
   val daveHitsChuck = Scenario(
-    action = Action(
-      actionType = ActionType.SingleAttack,
+    action = Action[Stats](
+      actionType = Attack[Stats](ActionType.SingleAttack),
       from = characters.dave.name,
       target = characters.chuck.name
     ),
@@ -42,7 +42,7 @@ object D20Scenario {
 }
 
 case class Scenario[S](
-  action: Action,
+  action: Action[S],
   duel: Duel[S]
 )
 

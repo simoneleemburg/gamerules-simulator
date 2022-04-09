@@ -1,9 +1,9 @@
 package nl.sass.gamesimulator.d20
 
 import nl.sass.gamesimulator.Outcome._
-import nl.sass.gamesimulator.d20.model.AttackBonus
+import nl.sass.gamesimulator.d20.model.{ AttackBonus, DifficultyCheck }
 import nl.sass.gamesimulator.dice.FixedRollResolution
-import nl.sass.gamesimulator.{ BaseSpec, DifficultyCheck }
+import nl.sass.gamesimulator.BaseSpec
 
 class D20CheckResolutionSpec extends BaseSpec {
 
